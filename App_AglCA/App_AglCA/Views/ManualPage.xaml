@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:local="clr-namespace:App_AglCA"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="App_AglCA.Views.ManualPage"
+             Title="{Binding Title}"
+             BackgroundColor="DarkGray">
+    
+    <ContentPage.Content>
+        <local:CustomWebView Uri="test.pdf" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </ContentPage.Content>
+    
+</ContentPage>

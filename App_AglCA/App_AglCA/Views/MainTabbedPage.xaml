@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            xmlns:behaviors="clr-namespace:App_AglCA.Behaviors"
+            xmlns:local="clr-namespace:App_AglCA.Views"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="App_AglCA.Views.MainTabbedPage">
+
+    <TabbedPage.Behaviors>
+        <behaviors:TabbedPageNavigationBehavior />
+    </TabbedPage.Behaviors>
+    <TabbedPage.Children>
+        <local:ManualPage />
+        <local:MainPage />
+        <local:SettingsPage />
+    </TabbedPage.Children>
+
+</TabbedPage>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
+             x:Class="App_AglCA.Views.MainPage"
+             Title="{Binding Title}"
+             BackgroundColor="DarkGray">
+
+    <StackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+            <Frame CornerRadius="10"  
+            OutlineColor="Transparent" 
+            Padding="0"
+            BackgroundColor="Gray"   
+            HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <Image x:Name="AGL_Logo" Source="local:ImageResource App_AglCA.Resources.agl_logo.png" HeightRequest="140" WidthRequest="240" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <StackLayout HorizontalOptions="Center">
+                <Button x:Name="btnPlay"/>
+                <Image x:Name="btnImage" HeightRequest="140" WidthRequest="140">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_PlayTapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <!--<flex:FlexButton
+                    x:Name="btnFlex"
+                    WidthRequest="128"
+                    HeightRequest="128"
+                    CornerRadius="64"
+                    Padding="0"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    ForegroundColor="White"
+                    HighlightForegroundColor="Gold"
+                    BackgroundColor="Transparent"
+                    HighlightBackgroundColor="Transparent"
+                    TouchedUp="btnFlex_Clicked"
+                    Clicked="btnFlex_Clicked"
+                    TouchedDown="btnFlex_Clicked"
+                    ClickedCommand="{Binding Dial0}" />-->
+                
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <Frame CornerRadius="10"
+            OutlineColor="Transparent"
+            BackgroundColor="Transparent"   
+            HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <Image x:Name="btnImageKeyboard" HeightRequest="32" WidthRequest="32">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_KeyboardTapped" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <!--<flex:FlexButton x:Name="btnKeyboard"
+                        WidthRequest="32"
+                        HeightRequest="32"
+                        Padding="0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        ForegroundColor="White"
+                        HighlightForegroundColor="Gold"
+                        BackgroundColor="Transparent"
+                        HighlightBackgroundColor="Transparent"
+                        TouchedUp="btnKeyboard_TouchedUp" />-->
+                    <Entry x:Name="entryKeyboard" BackgroundColor="Transparent" Keyboard="Telephone" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
